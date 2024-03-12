@@ -24,6 +24,7 @@ public class TarefaController {
     }
 
     @GetMapping // Mapeia as requisições GET para o método.
+    @CrossOrigin(origins = "*")
     @ResponseBody
     public List<TarefaDTO> getAll()//Método que retorna todas as tarefas existentes
     {
@@ -31,6 +32,7 @@ public class TarefaController {
     }
 
     @GetMapping("/{tarefaId}") //Mapeia requisição GET para o método, identificando apenas uma tarefa
+    @CrossOrigin(origins = "*")
     @ResponseBody
     public TarefaDTO getTarefa(@PathVariable("tarefaId") Long tarefaId)//Método que retorna upenas uma tarefa de acordo com seu id
     {
@@ -38,6 +40,7 @@ public class TarefaController {
     }
 
     @PutMapping("/{tarefaId}")// Mapeia as requisições PUT para o método.
+    @CrossOrigin(origins = "*")
     @ResponseBody
     public TarefaDTO atualizar(@PathVariable("tarefaId") Long tarefaId, @RequestBody TarefaDTO tarefaDTO) //Método responsavel por atualizar uma tarefa.
     {
@@ -46,6 +49,7 @@ public class TarefaController {
 
 
     @DeleteMapping("/{tarefaId}")//Mapeia requisições DELETE para o método, tendo como identificador "tarefaId"
+    @CrossOrigin(origins = "*")
     @ResponseBody
     public String deletar(@PathVariable("tarefaId") Long tarefaId) //Método para deletar a tarefa
     {

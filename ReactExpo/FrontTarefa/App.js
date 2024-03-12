@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
-import { } from 'react-native-web';
+import { StyleSheet, Text, View, TouchableHighlight, Platform } from 'react-native';
 import axios from 'axios';
 
 const initialState = {
   tarefas: []
 }
 
-const API_URL = 'http://10.0.2.2:8080/tarefas';
+const API_URL =  Platform.OS  == 'android' ? 'http://10.0.2.2:8080/tarefas' : 'http://localhost:8080/tarefas';
 
 
 export default class App extends Component {
@@ -21,10 +20,10 @@ export default class App extends Component {
     try {
       const response = await axios.get(API_URL);
       this.setState({ tarefas: response.data }, () => {
-        console.log('Data fetched...', this.state.tarefas);
+        console.log('Tarefas:', this.state.tarefas);
       });
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error('Error:', error);
     }
   };
 
