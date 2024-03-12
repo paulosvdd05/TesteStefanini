@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+//Classe responsavel pelas operações de CRUD da Entity Tarefa.
 @Service
 public class TarefaService {
     @Autowired
@@ -47,6 +48,16 @@ public class TarefaService {
                 .stream()
                 .map(this::converter).collect(Collectors.toList());
     }
+
+    public TarefaDTO getById(Long tarefaId) {
+        Tarefa tarefa = repository.findById(tarefaId).orElse(null);
+        if (tarefa != null) {
+            return converter(tarefa);
+        }
+        return null;
+    }
+
+
 
     public String delete (Long tarefaId) {
         repository.deleteById(tarefaId);

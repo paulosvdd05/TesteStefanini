@@ -1,5 +1,6 @@
 package api.tarefa.repository;
 
+//classe com a funcionalidade de realizar a comunicação das tarefas e os processos.
 public class TarefaDTO {
     private Long id;
     private String titulo;

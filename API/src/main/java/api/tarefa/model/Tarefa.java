@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "tarefa")
 public class Tarefa {
+    //Definindo e indicando chave primaria e colunas
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id", columnDefinition = "serial")
