@@ -1,6 +1,6 @@
 # Teste Técnico Stefanini
 
-Este projeto foi desenvolvido utilizando o Expo para o front-end e Spring Boot para o back-end.
+Este projeto foi desenvolvido utilizando o React Native com Expo para o front-end e Spring Boot para o back-end.
 
 ## Pré-requisitos
 
