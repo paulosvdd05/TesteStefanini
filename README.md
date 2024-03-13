@@ -18,7 +18,10 @@ Antes de iniciar o projeto, certifique-se de ter o seguinte software instalado e
 cd API
 2. Entre na pasta `database-docker` e inicie o Docker:
 cd database-docker docker compose up -d
-3. Volte para a pasta `API` e execute a `MainApplication`
+3. Volte para a pasta `API`
+4. Entre no package tarefa
+cd .\src\main\java\api\tarefa\
+5. Compile e execute a classe MainApplication
 ### Expo Web
 
 1. Navegue até a pasta `ReactExpo`:
