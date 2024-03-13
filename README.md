@@ -1,6 +1,6 @@
 # Teste Técnico Stefanini
 
-Este projeto foi desenvolvido utilizando o React Native com Expo para o front-end e Spring Boot para o back-end.
+Este projeto foi desenvolvido utilizando o React Native com Expo para o front-end e Spring Boot/PostgreSQL para a API.
 
 ## Pré-requisitos
 
@@ -34,5 +34,16 @@ npx expo install react-native-web react-dom @expo/metro-runtime
 npx expo start
 
 Agora você deve ser capaz de acessar a aplicação em seu navegador.
+
+## Endpoints da API
+
+| Método HTTP | Endpoint          | Descrição                                           |
+|-------------|-------------------|-----------------------------------------------------|
+| POST        | /tarefas          | Cria uma nova tarefa com base nos dados fornecidos |
+| GET         | /tarefas          | Retorna todas as tarefas existentes                 |
+| GET         | /tarefas/{tarefaId} | Retorna uma tarefa específica com base no ID      |
+| PUT         | /tarefas/{tarefaId} | Atualiza os dados de uma tarefa existente com base no ID |
+| DELETE      | /tarefas/{tarefaId} | Deleta uma tarefa existente com base no ID           |
+
 
 
