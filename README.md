@@ -32,6 +32,7 @@ npm install
 npx expo install react-native-web react-dom @expo/metro-runtime
 4. Inicie o servidor Expo:
 npx expo start
+
 Agora você deve ser capaz de acessar a aplicação em seu navegador.
 
 
