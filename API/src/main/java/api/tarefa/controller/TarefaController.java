@@ -18,6 +18,7 @@ public class TarefaController {
 
     //Endpoints: Criar, Obter todos registros, obter registro específico,
     @PostMapping// Mapeia as requisições POST para o método.
+    @CrossOrigin(origins = "*")
     @ResponseBody
     public TarefaDTO criar(@RequestBody TarefaDTO tarefaDTO) {
         return tarefaService.criar(tarefaDTO);
