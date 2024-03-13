@@ -112,11 +112,11 @@ export default class App extends Component {
                   keyExtractor={item => `${item.id}`}
                   renderItem={this.renderTarefa}
                 />
-                : <View style={{ justifyContent: "center", alignItems: "center" }}> <Text style={{ fontSize: 20, textAlign: 'center', marginTop: 20 }}>Nenhuma tarefa encontrada</Text>
+                : <View style={styles.naoEncontrado}> <Text style={styles.text}>Nenhuma tarefa encontrada</Text>
                   <TouchableOpacity onPress={() => this.setState({ id: "" }, () => {
                     this.fetchData()
                   })}>
-                    <Text style={{ color: commonStyles.colors.primary }}>Limpar Busca</Text>
+                    <Text style={styles.text2}>Limpar Busca</Text>
                   </TouchableOpacity></View>}
 
             </View>
@@ -192,5 +192,24 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     borderRadius: 10,
     padding: 10,
+  },
+  naoEncontrado: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1
+  },
+  text2: {
+    color: commonStyles.colors.primary,
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: 20
+  },
+  text: {
+    color: commonStyles.colors.tertiary,
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center'
   }
+  
 });
